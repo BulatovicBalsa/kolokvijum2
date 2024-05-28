@@ -15,7 +15,6 @@ namespace Pub
             while (true)
             {
                 var numbers = DrawLotteryNumbers();
-                numbers = new LotteryNumbers() { Number1 = 1, Number2 = 2 };
                 MachineClient.DrawLotteryNumbers(numbers);
                 Console.WriteLine($"Drew numbers: {numbers.Number1} and {numbers.Number2}");
                 Thread.Sleep(Frequency);
