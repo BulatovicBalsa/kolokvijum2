@@ -34,6 +34,9 @@ namespace Sub
             CreateTicket(name);
 
             Console.WriteLine("Waiting for the draw...");
+            Console.WriteLine();
+
+            Console.ReadLine();
         }
 
         public static void CreateTicket(string name)
