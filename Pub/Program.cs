@@ -23,8 +23,8 @@ namespace Pub
 
         public static LotteryNumbers DrawLotteryNumbers()
         {
-            var number1 = GetSecureRandomNumber(1, 11);
-            var number2 = GetSecureRandomNumber(1, 11);
+            var number1 = GetSecureRandomNumber(1, 10);
+            var number2 = GetSecureRandomNumber(1, 10);
             var numbers = new LotteryNumbers
             {
                 Number1 = number1,
