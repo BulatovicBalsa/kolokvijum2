@@ -55,11 +55,18 @@ namespace Sub
                     }
                 }
 
+                double stake;
+                Console.WriteLine("Insert your stake:");
+                while (!double.TryParse(Console.ReadLine(), out stake) || stake <= 0) {
+                    Console.WriteLine("Invalid stake. Please insert a positive number.");
+                }
+
                 var ticket = new Ticket
                 {
                     PlayerName = name,
                     Number1 = numbers[0],
-                    Number2 = numbers[1]
+                    Number2 = numbers[1],
+                    Stake = stake
                 };
 
                 if (_subClient.SubmitTicket(ticket)) return;
