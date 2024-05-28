@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="eb3a6e6d-4be2-479f-a7f0-8a92f212eb46" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58005/PubSubService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PubSubService.xsd" MetadataType="Schema" ID="86091d10-b11c-4268-841a-5d46ec318a82" SourceId="1" SourceUrl="http://localhost:58005/PubSubService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PubSubService1.xsd" MetadataType="Schema" ID="e81350b9-14e6-42ae-8c1f-fe5998678767" SourceId="1" SourceUrl="http://localhost:58005/PubSubService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PubSubService2.xsd" MetadataType="Schema" ID="e9a7f699-978d-4059-9ba6-182723c13483" SourceId="1" SourceUrl="http://localhost:58005/PubSubService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PubSubService.disco" MetadataType="Disco" ID="378cf57b-4534-451f-8975-16f3390b93d7" SourceId="1" SourceUrl="http://localhost:58005/PubSubService.svc?disco" />
+    <MetadataFile FileName="MachinePlayerService.wsdl" MetadataType="Wsdl" ID="a5d1bc80-aeef-4230-810a-05ee04f624c8" SourceId="1" SourceUrl="http://localhost:58005/PubSubService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
