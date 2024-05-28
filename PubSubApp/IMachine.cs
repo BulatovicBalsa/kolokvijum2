@@ -55,6 +55,9 @@ namespace PubSubApp
         [DataMember] public int Rank { get; set; }
         [DataMember] public double CurrentTurnEarnings { get; set; }
         [DataMember] public int HitCount { get; set; }
+        [DataMember] public double TotalStake { get; set; }
+        [DataMember] public double TotalEarnings { get; set; }
+        [DataMember] public LotteryNumbers LotteryNumbers { get; set; }
     }
 
     [DataContract]

@@ -183,10 +183,19 @@ namespace Pub.ServiceReference1 {
         private int HitCountField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Pub.ServiceReference1.LotteryNumbers LotteryNumbersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Pub.ServiceReference1.Player PlayerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int RankField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double TotalEarningsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double TotalStakeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -225,6 +234,19 @@ namespace Pub.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public Pub.ServiceReference1.LotteryNumbers LotteryNumbers {
+            get {
+                return this.LotteryNumbersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LotteryNumbersField, value) != true)) {
+                    this.LotteryNumbersField = value;
+                    this.RaisePropertyChanged("LotteryNumbers");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public Pub.ServiceReference1.Player Player {
             get {
                 return this.PlayerField;
@@ -246,6 +268,32 @@ namespace Pub.ServiceReference1 {
                 if ((this.RankField.Equals(value) != true)) {
                     this.RankField = value;
                     this.RaisePropertyChanged("Rank");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double TotalEarnings {
+            get {
+                return this.TotalEarningsField;
+            }
+            set {
+                if ((this.TotalEarningsField.Equals(value) != true)) {
+                    this.TotalEarningsField = value;
+                    this.RaisePropertyChanged("TotalEarnings");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double TotalStake {
+            get {
+                return this.TotalStakeField;
+            }
+            set {
+                if ((this.TotalStakeField.Equals(value) != true)) {
+                    this.TotalStakeField = value;
+                    this.RaisePropertyChanged("TotalStake");
                 }
             }
         }

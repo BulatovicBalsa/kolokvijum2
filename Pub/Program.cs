@@ -10,11 +10,12 @@ namespace Pub
         private const int Frequency = 60000;
         private static readonly MachineClient MachineClient = new MachineClient();
 
-        private static void Main(string[] args)
+        private static void Main()
         {
             while (true)
             {
                 var numbers = DrawLotteryNumbers();
+                numbers = new LotteryNumbers() { Number1 = 1, Number2 = 2 };
                 MachineClient.DrawLotteryNumbers(numbers);
                 Console.WriteLine($"Drew numbers: {numbers.Number1} and {numbers.Number2}");
                 Thread.Sleep(Frequency);

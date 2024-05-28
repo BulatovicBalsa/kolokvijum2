@@ -18,12 +18,18 @@ namespace PubSubApp
             var playerEarnings = new Dictionary<string, double>();
             var playerHitCount = new Dictionary<string, int>();
 
+            var sortedNumbersList = new List<int> { numbers.Number1, numbers.Number2 };
+            sortedNumbersList.Sort();
+
             foreach (var ticket in Tickets)
             {
                 var earning = 0.0;
                 var hitCount = 0;
-                if (ticket.Number1 == numbers.Number1) hitCount++;
-                if (ticket.Number2 == numbers.Number2) hitCount++;
+                var sortedTicketNumbers = new List<int> { ticket.Number1, ticket.Number2 };
+                sortedTicketNumbers.Sort();
+
+                if (sortedNumbersList[0] == sortedTicketNumbers[0]) hitCount++;
+                if (sortedNumbersList[1] == sortedTicketNumbers[1]) hitCount++;
 
                 switch (hitCount)
                 {
@@ -51,7 +57,10 @@ namespace PubSubApp
                     Player = p,
                     Rank = rankedPlayers.IndexOf(p) + 1,
                     CurrentTurnEarnings = playerEarnings[p.Name],
-                    HitCount = playerHitCount[p.Name]
+                    HitCount = playerHitCount[p.Name],
+                    TotalStake = p.CumulativeStake,
+                    TotalEarnings = p.Earnings,
+                    LotteryNumbers = numbers
                 }));
 
             Players.Values.ToList().ForEach(p => p.IsPlayingCurrentRound = false);

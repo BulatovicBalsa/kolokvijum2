@@ -20,8 +20,11 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="CurrentTurnEarnings" type="xs:double" />
       <xs:element minOccurs="0" name="HitCount" type="xs:int" />
+      <xs:element minOccurs="0" name="LotteryNumbers" nillable="true" type="tns:LotteryNumbers" />
       <xs:element minOccurs="0" name="Player" nillable="true" type="tns:Player" />
       <xs:element minOccurs="0" name="Rank" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalEarnings" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalStake" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Summary" nillable="true" type="tns:Summary" />

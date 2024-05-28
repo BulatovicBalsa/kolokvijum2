@@ -9,10 +9,13 @@ namespace Sub
         public void SummaryArrived(Summary summary)
         {
             Console.WriteLine("Lottery is drawn:");
+            Console.WriteLine("Lottery numbers: " + summary.LotteryNumbers.Number1 + " and " + summary.LotteryNumbers.Number2);
             Console.WriteLine("Player: " + summary.Player.Name);
             Console.WriteLine("Rank: " + summary.Rank);
             Console.WriteLine("Current turn earnings: " + summary.CurrentTurnEarnings);
             Console.WriteLine("Hit count: " + summary.HitCount);
+            Console.WriteLine("Total stake: " + summary.TotalStake);
+            Console.WriteLine("Total earnings: " + summary.TotalEarnings);
             Console.WriteLine();
         }
     }
@@ -21,7 +24,7 @@ namespace Sub
     {
         private static PlayerClient _subClient;
 
-        private static void Main(string[] args)
+        private static void Main()
         {
             Console.WriteLine("Insert your name:");
             var name = Console.ReadLine();
